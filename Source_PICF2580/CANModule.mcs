@@ -28,6 +28,32 @@ ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
 TraceCmdString=
 DebugOptions=
 [File002]
+Location=E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.o
+Folder=Intermediary
+DeviceName=PIC18F2580
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\MCC18\lib||$(LKRDIR)|C:\MCC18\bin\LKR||
+SOLK=<src>|src\j1939.c|src\main.c||<obj>||<lib>||<lkr>|C:\MCC18\bin\LKR\18f2580_g.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.o
+Folder=Intermediary
+DeviceName=PIC18F2580
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={E56A1C86-9D32-4DF6-8C34-FE0388B1B644}
+LanguageToolLocation=C:\MCC18\bin\mcc18.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\MCC18\lib||$(LKRDIR)|C:\MCC18\bin\LKR||
+SOLK=<src>|src\j1939.c|src\main.c||<obj>||<lib>||<lkr>|C:\MCC18\bin\LKR\18f2580_g.lkr||
+SuiteArgsString=
+ToolArgsString=-Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+TraceCmdString=
+DebugOptions=
+[File004]
 Location=E:\sektor\Project\CANmodul ehb\CANModul_2580\CANModule.cof
 Folder=Output
 DeviceName=PIC18F2580
@@ -40,8 +66,34 @@ SuiteArgsString=
 ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
 TraceCmdString=
 DebugOptions=
-[File003]
+[File005]
 Location=E:\sektor\Project\CANmodul ehb\CANModul_2580\CANModule.hex
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\MCC18\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\MCC18\lib||$(LKRDIR)|C:\MCC18\bin\LKR||
+SOLK=<src>|src\j1939.c|src\main.c||<obj>||<lib>||<lkr>|C:\MCC18\bin\LKR\18f2580_g.lkr||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=E:\sektor\GIT_project\Konverter\Source_PICF2580\CANModule.cof
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
+LanguageToolID={96C98149-AA1B-4CF9-B967-FAE79CAB663C}
+LanguageToolLocation=C:\MCC18\bin\mplink.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)|C:\MCC18\lib||$(LKRDIR)|C:\MCC18\bin\LKR||
+SOLK=<src>|src\j1939.c|src\main.c||<obj>||<lib>||<lkr>|C:\MCC18\bin\LKR\18f2580_g.lkr||
+SuiteArgsString=
+ToolArgsString=/o"$(BINDIR_)$(TARGETBASE).cof" /M"$(BINDIR_)$(TARGETBASE).map" /W
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=E:\sektor\GIT_project\Konverter\Source_PICF2580\CANModule.hex
 Folder=Output
 DeviceName=PIC18F2580
 LanguageToolSuiteID={5B7D72DD-9861-47BD-9F60-2BE967BF8416}

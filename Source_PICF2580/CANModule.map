@@ -1,52 +1,52 @@
 MPLINK 4.37, Linker
-Linker Map File - Created Wed Aug 01 08:17:04 2012
+Linker Map File - Created Thu Nov 01 15:01:22 2012
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
            .code___init.o       code   0x000006    program   0x000002
-      InterruptVectorHigh       code   0x000008    program   0x000b16
-                   .cinit    romdata   0x000b1e    program   0x00001a
-            .code_j1939.o       code   0x000b38    program   0x000cb8
-                     PROG       code   0x0017f0    program   0x00055e
-               _cinit_scn       code   0x001d4e    program   0x00009e
-          .code_adcopen.o       code   0x001dec    program   0x00006e
-           .code_t1open.o       code   0x001e5a    program   0x000042
-          .code_t1write.o       code   0x001e9c    program   0x000038
-         .code_adcsetch.o       code   0x001ed4    program   0x00002e
-                    .code       code   0x001f02    program   0x000020
-             _startup_scn       code   0x001f22    program   0x00001c
-          .code_adcread.o       code   0x001f3e    program   0x000012
-          .code_adcbusy.o       code   0x001f50    program   0x00000a
-         .code_adcclose.o       code   0x001f5a    program   0x000006
-          .code_adcconv.o       code   0x001f60    program   0x000004
-         .romdata_j1939.o    romdata   0x001f64    program   0x000000
-       .romdata_adcread.o    romdata   0x001f64    program   0x000000
-          .idata_main.o_i    romdata   0x001f64    program   0x000010
-        .romdata_t1open.o    romdata   0x001f64    program   0x000000
-        .idata_t1open.o_i    romdata   0x001f64    program   0x000000
-          .romdata_main.o    romdata   0x001f64    program   0x000000
-       .romdata_adcopen.o    romdata   0x001f64    program   0x000000
-      .romdata_adcsetch.o    romdata   0x001f64    program   0x000000
-       .romdata_adcconv.o    romdata   0x001f64    program   0x000000
-       .idata_t1write.o_i    romdata   0x001f64    program   0x000000
-       .romdata_t1write.o    romdata   0x001f64    program   0x000000
-      .romdata_adcclose.o    romdata   0x001f64    program   0x000000
-       .romdata_adcbusy.o    romdata   0x001f64    program   0x000000
-        .romdata___init.o    romdata   0x001f64    program   0x000000
-         .romdata_c018i.o    romdata   0x001f64    program   0x000000
-         .idata_j1939.o_i    romdata   0x001f74    program   0x000004
-            .code_c018i.o       code   0x001f78    program   0x000000
-        .idata___init.o_i    romdata   0x001f78    program   0x000000
-      .idata_adcsetch.o_i    romdata   0x001f78    program   0x000000
-         .idata_c018i.o_i    romdata   0x001f78    program   0x000000
-       .idata_adcread.o_i    romdata   0x001f78    program   0x000000
-       .idata_adcopen.o_i    romdata   0x001f78    program   0x000000
-             .code_main.o       code   0x001f78    program   0x000000
-       .idata_adcconv.o_i    romdata   0x001f78    program   0x000000
-      .idata_adcclose.o_i    romdata   0x001f78    program   0x000000
-       .idata_adcbusy.o_i    romdata   0x001f78    program   0x000000
+      InterruptVectorHigh       code   0x000008    program   0x001736
+                   .cinit    romdata   0x00173e    program   0x00001a
+            .code_j1939.o       code   0x001758    program   0x000cb8
+                     PROG       code   0x002410    program   0x00055e
+               _cinit_scn       code   0x00296e    program   0x00009e
+          .code_adcopen.o       code   0x002a0c    program   0x00006e
+           .code_t1open.o       code   0x002a7a    program   0x000042
+          .code_t1write.o       code   0x002abc    program   0x000038
+         .code_adcsetch.o       code   0x002af4    program   0x00002e
+                    .code       code   0x002b22    program   0x000020
+             _startup_scn       code   0x002b42    program   0x00001c
+          .code_adcread.o       code   0x002b5e    program   0x000012
+          .code_adcbusy.o       code   0x002b70    program   0x00000a
+         .code_adcclose.o       code   0x002b7a    program   0x000006
+          .code_adcconv.o       code   0x002b80    program   0x000004
+         .romdata_j1939.o    romdata   0x002b84    program   0x000000
+       .romdata_adcread.o    romdata   0x002b84    program   0x000000
+          .idata_main.o_i    romdata   0x002b84    program   0x000010
+        .romdata_t1open.o    romdata   0x002b84    program   0x000000
+        .idata_t1open.o_i    romdata   0x002b84    program   0x000000
+          .romdata_main.o    romdata   0x002b84    program   0x000000
+       .romdata_adcopen.o    romdata   0x002b84    program   0x000000
+      .romdata_adcsetch.o    romdata   0x002b84    program   0x000000
+       .romdata_adcconv.o    romdata   0x002b84    program   0x000000
+       .idata_t1write.o_i    romdata   0x002b84    program   0x000000
+       .romdata_t1write.o    romdata   0x002b84    program   0x000000
+      .romdata_adcclose.o    romdata   0x002b84    program   0x000000
+       .romdata_adcbusy.o    romdata   0x002b84    program   0x000000
+        .romdata___init.o    romdata   0x002b84    program   0x000000
+         .romdata_c018i.o    romdata   0x002b84    program   0x000000
+         .idata_j1939.o_i    romdata   0x002b94    program   0x000004
+            .code_c018i.o       code   0x002b98    program   0x000000
+        .idata___init.o_i    romdata   0x002b98    program   0x000000
+      .idata_adcsetch.o_i    romdata   0x002b98    program   0x000000
+         .idata_c018i.o_i    romdata   0x002b98    program   0x000000
+       .idata_adcread.o_i    romdata   0x002b98    program   0x000000
+       .idata_adcopen.o_i    romdata   0x002b98    program   0x000000
+             .code_main.o       code   0x002b98    program   0x000000
+       .idata_adcconv.o_i    romdata   0x002b98    program   0x000000
+      .idata_adcclose.o_i    romdata   0x002b98    program   0x000000
+       .idata_adcbusy.o_i    romdata   0x002b98    program   0x000000
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
     .config_300005_main.o    romdata   0x300005    program   0x000001
@@ -99,176 +99,183 @@ Linker Map File - Created Wed Aug 01 08:17:04 2012
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x001f77      
+                            0x000000    0x002b97      
                             0x300001    0x300001      
                             0x300003    0x300003      
                             0x300005    0x300006      
-            8060 out of 33048 program addresses used, program memory utilization is 24%
+            11164 out of 33048 program addresses used, program memory utilization is 33%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                  BusyADC   0x001f50    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
-CalcAirTemperatur_For_J1939   0x00074c    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-  CalcFuelLevel_For_J1939   0x0008c6    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                 CloseADC   0x001f5a    program     extern C:\MCC18\src\pmc_common\ADC\adcclose.c
-               ConvertADC   0x001f60    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
-            ECAN_Transmit   0x0017aa    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                 FLO1632S   0x0017f4    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
-                 FLO1632U   0x0017f0    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
-                    FPA32   0x00181c    program     extern C:\MCC18\src\traditional\math\addFP.asm
-                    FPD32   0x001948    program     extern C:\MCC18\src\traditional\math\divFP.asm
-                    FPM32   0x0019ee    program     extern C:\MCC18\src\traditional\math\mulFP.asm
-                    FPS32   0x00181a    program     extern C:\MCC18\src\traditional\math\addFP.asm
-                  INT3208   0x001ac8    program     extern C:\MCC18\src\traditional\math\castFP08.asm
-                  INT3216   0x001b16    program     extern C:\MCC18\src\traditional\math\castFP16.asm
-     InterruptHandlerHigh   0x00000e    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-      InterruptVectorHigh   0x000008    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-       J1939_ClaimAddress   0x001166    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-        J1939_CompareName   0x0012ac    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-           J1939_CopyName   0x001122    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-          J1939_MesToRegs   0x000cbc    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-  J1939_PutInReceiveQueue   0x0015ac    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-             J1939_RXsize   0x00173c    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
- J1939_RecalculateAddress   0x001250    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-            J1939_Receive   0x0016da    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-    J1939_ReceiveMessages   0x001482    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-          J1939_RegsToMes   0x000ece    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-               J1939_Send   0x001656    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-     J1939_SendOneMessage   0x001342    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-   J1939_SetAddressFilter   0x00122a    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-             J1939_TXsize   0x001744    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-   J1939_TransmitMessages   0x0015fc    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-               J1939_init   0x000b38    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-             J1939_memcpy   0x00174c    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-               J1939_poll   0x00142a    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                  OpenADC   0x001dec    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
-               OpenTimer1   0x001e5a    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
-                  ReadADC   0x001f3e    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
-        SendAirTemperatur   0x0005f8    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-            SendFuelLevel   0x0006b8    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               SetChanADC   0x001ed4    program     extern C:\MCC18\src\pmc_common\ADC\adcsetch.c
-                  TAGTB32   0x001b74    program     extern C:\MCC18\src\traditional\math\gtFP.asm
-                  TALTB32   0x001b86    program     extern C:\MCC18\src\traditional\math\ltFP.asm
-               User_Timer   0x0001bc    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-              WriteTimer1   0x001e9c    program     extern C:\MCC18\src\pmc_common\Timers\t1write.c
-              __FpCompare   0x001b98    program     extern C:\MCC18\src\traditional\math\compFP.asm
-                 __FpExit   0x001c4e    program     extern C:\MCC18\src\traditional\math\packFP.asm
-                 __FpPack   0x001c7a    program     extern C:\MCC18\src\traditional\math\packFP.asm
-            __FpReturnNaN   0x001c42    program     extern C:\MCC18\src\traditional\math\packFP.asm
-         __FpReturnNegInf   0x001c54    program     extern C:\MCC18\src\traditional\math\packFP.asm
-        __FpReturnNegZero   0x001c6c    program     extern C:\MCC18\src\traditional\math\packFP.asm
-         __FpReturnPosInf   0x001c5a    program     extern C:\MCC18\src\traditional\math\packFP.asm
-        __FpReturnPosZero   0x001c74    program     extern C:\MCC18\src\traditional\math\packFP.asm
-        __FpReturnSignInf   0x001c50    program     extern C:\MCC18\src\traditional\math\packFP.asm
-       __FpReturnSignZero   0x001c68    program     extern C:\MCC18\src\traditional\math\packFP.asm
-              __FpReturnW   0x001cd2    program     extern C:\MCC18\src\traditional\math\packFP.asm
-              __FpUnPackA   0x001cf2    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
-              __FpUnPackB   0x001d22    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
+                  BusyADC   0x002b70    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
+CalcAirTemperatur_For_J1939   0x000750    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+  CalcFuelLevel_For_J1939   0x0014e4    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                 CloseADC   0x002b7a    program     extern C:\MCC18\src\pmc_common\ADC\adcclose.c
+               ConvertADC   0x002b80    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
+            ECAN_Transmit   0x0023ca    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                 FLO1632S   0x002414    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
+                 FLO1632U   0x002410    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
+                    FPA32   0x00243c    program     extern C:\MCC18\src\traditional\math\addFP.asm
+                    FPD32   0x002568    program     extern C:\MCC18\src\traditional\math\divFP.asm
+                    FPM32   0x00260e    program     extern C:\MCC18\src\traditional\math\mulFP.asm
+                    FPS32   0x00243a    program     extern C:\MCC18\src\traditional\math\addFP.asm
+                  INT3208   0x0026e8    program     extern C:\MCC18\src\traditional\math\castFP08.asm
+                  INT3216   0x002736    program     extern C:\MCC18\src\traditional\math\castFP16.asm
+     InterruptHandlerHigh   0x00000e    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+      InterruptVectorHigh   0x000008    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+       J1939_ClaimAddress   0x001d86    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+        J1939_CompareName   0x001ecc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+           J1939_CopyName   0x001d42    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+          J1939_MesToRegs   0x0018dc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+  J1939_PutInReceiveQueue   0x0021cc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+             J1939_RXsize   0x00235c    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+ J1939_RecalculateAddress   0x001e70    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+            J1939_Receive   0x0022fa    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+    J1939_ReceiveMessages   0x0020a2    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+          J1939_RegsToMes   0x001aee    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+J1939_RequestForAddressClaimHandling   0x002198    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+               J1939_Send   0x002276    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+     J1939_SendOneMessage   0x001f62    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+   J1939_SetAddressFilter   0x001e4a    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+             J1939_TXsize   0x002364    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+   J1939_TransmitMessages   0x00221c    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+               J1939_init   0x001758    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+             J1939_memcpy   0x00236c    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+               J1939_poll   0x00204a    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                  OpenADC   0x002a0c    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
+               OpenTimer1   0x002a7a    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
+                  ReadADC   0x002b5e    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
+        SendAirTemperatur   0x0005fc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+            SendFuelLevel   0x0006bc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               SetChanADC   0x002af4    program     extern C:\MCC18\src\pmc_common\ADC\adcsetch.c
+                  TAGTB32   0x002794    program     extern C:\MCC18\src\traditional\math\gtFP.asm
+                  TALTB32   0x0027a6    program     extern C:\MCC18\src\traditional\math\ltFP.asm
+               User_Timer   0x0001bc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+              WriteTimer1   0x002abc    program     extern C:\MCC18\src\pmc_common\Timers\t1write.c
+              __FpCompare   0x0027b8    program     extern C:\MCC18\src\traditional\math\compFP.asm
+                 __FpExit   0x00286e    program     extern C:\MCC18\src\traditional\math\packFP.asm
+                 __FpPack   0x00289a    program     extern C:\MCC18\src\traditional\math\packFP.asm
+            __FpReturnNaN   0x002862    program     extern C:\MCC18\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x002874    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x00288c    program     extern C:\MCC18\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x00287a    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x002894    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x002870    program     extern C:\MCC18\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x002888    program     extern C:\MCC18\src\traditional\math\packFP.asm
+              __FpReturnW   0x0028f2    program     extern C:\MCC18\src\traditional\math\packFP.asm
+              __FpUnPackA   0x002912    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x002942    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
        ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00000   0x00000c    program     static                          
-       ___return_lbl00001   0x001f3c    program     static                          
-       ___return_lbl00002   0x001dea    program     static                          
-               __config_0   0x300001    program     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               __config_1   0x300003    program     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               __config_2   0x300005    program     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               __config_3   0x300006    program     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
+       ___return_lbl00001   0x002b5c    program     static                          
+       ___return_lbl00002   0x002a0a    program     static                          
+               __config_0   0x300001    program     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               __config_1   0x300003    program     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               __config_2   0x300005    program     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               __config_3   0x300006    program     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
                    __init   0x000006    program     extern C:\MCC18\src\traditional\stdclib\__init.c
-            __zero_memory   0x001f02    program     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-                _do_cinit   0x001d4e    program     extern C:\MCC18\src\traditional\startup\c018i.c
+               __tmplbl_1   0x00144a    program     static                          
+               __tmplbl_2   0x00144a    program     static                          
+               __tmplbl_3   0x00144a    program     static                          
+               __tmplbl_4   0x00144a    program     static                          
+               __tmplbl_5   0x00144a    program     static                          
+               __tmplbl_6   0x00144a    program     static                          
+               __tmplbl_7   0x00144a    program     static                          
+            __zero_memory   0x002b22    program     extern C:\MCC18\src\traditional\proc\p18F2580.asm
+                _do_cinit   0x00296e    program     extern C:\MCC18\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                 _startup   0x001f22    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                 adc_init   0x000114    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                  canInit   0x000c28    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                  canMode   0x000c64    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                compare_l   0x001f18    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
-                copy_loop   0x001dc0    program     static                          
-            copy_one_byte   0x001dc6    program     static                          
-                     done   0x001dea    program     static                          
-             done_copying   0x001dd4    program     static                          
-                 jANotInf   0x001966    program     static C:\MCC18\src\traditional\math\divFP.asm
-                 jANotInf   0x001844    program     static C:\MCC18\src\traditional\math\addFP.asm
-                 jANotInf   0x001a0c    program     static C:\MCC18\src\traditional\math\mulFP.asm
-                 jANotNeg   0x0018d8    program     static C:\MCC18\src\traditional\math\addFP.asm
-                jANotZero   0x00197a    program     static C:\MCC18\src\traditional\math\divFP.asm
-              jAandWsetup   0x0018a8    program     static C:\MCC18\src\traditional\math\addFP.asm
-                  jAisNeg   0x001c14    program     static C:\MCC18\src\traditional\math\compFP.asm
-                 jAltBexp   0x001896    program     static C:\MCC18\src\traditional\math\addFP.asm
-                jBANotInf   0x00183a    program     static C:\MCC18\src\traditional\math\addFP.asm
-                 jBNotInf   0x001852    program     static C:\MCC18\src\traditional\math\addFP.asm
-              jBothFinite   0x001a1a    program     static C:\MCC18\src\traditional\math\mulFP.asm
-             jBothNotZero   0x001bb6    program     static C:\MCC18\src\traditional\math\compFP.asm
-             jBothNotZero   0x001a26    program     static C:\MCC18\src\traditional\math\mulFP.asm
-            jDifOrPosSign   0x001866    program     static C:\MCC18\src\traditional\math\addFP.asm
-                      jEQ   0x001bd2    program     static C:\MCC18\src\traditional\math\compFP.asm
-                    jExch   0x001bde    program     static C:\MCC18\src\traditional\math\compFP.asm
-                    jExit   0x001b14    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                    jExit   0x001b72    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                   jExpEQ   0x001c24    program     static C:\MCC18\src\traditional\math\compFP.asm
-                   jFinal   0x001c08    program     static C:\MCC18\src\traditional\math\compFP.asm
-               jFinalSign   0x001940    program     static C:\MCC18\src\traditional\math\addFP.asm
-                jHaveZero   0x001a22    program     static C:\MCC18\src\traditional\math\mulFP.asm
-                jI2F16Beg   0x001804    program     static C:\MCC18\src\traditional\math\cast16FP.asm
-                    jLoop   0x0019a2    program     static C:\MCC18\src\traditional\math\divFP.asm
-                    jLoop   0x001b52    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                    jLoop   0x001afc    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                jLoopExit   0x001b62    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                jLoopExit   0x001b0a    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                     jMax   0x001b26    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                     jMax   0x001ad8    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                  jMaxNeg   0x001b34    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                  jMaxNeg   0x001ae2    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                  jMaxPos   0x001adc    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                  jMaxPos   0x001b2a    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                      jNE   0x001bd6    program     static C:\MCC18\src\traditional\math\compFP.asm
-                    jNext   0x0019c8    program     static C:\MCC18\src\traditional\math\divFP.asm
-                jNoAdjust   0x0019c6    program     static C:\MCC18\src\traditional\math\divFP.asm
-                  jNoExch   0x001bfe    program     static C:\MCC18\src\traditional\math\compFP.asm
-             jNotBothZero   0x00186a    program     static C:\MCC18\src\traditional\math\addFP.asm
-                  jNotInf   0x001b42    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                  jNotInf   0x001aec    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                  jPkLoop   0x001c88    program     static C:\MCC18\src\traditional\math\packFP.asm
-             jPkRoundDone   0x001cd2    program     static C:\MCC18\src\traditional\math\packFP.asm
-               jPkRoundIt   0x001cba    program     static C:\MCC18\src\traditional\math\packFP.asm
-             jPkShiftDone   0x001ca4    program     static C:\MCC18\src\traditional\math\packFP.asm
-           jReturnPosInf0   0x001c5e    program     static C:\MCC18\src\traditional\math\packFP.asm
-                  jRotate   0x001c30    program     static C:\MCC18\src\traditional\math\compFP.asm
-                   jShift   0x001c1a    program     static C:\MCC18\src\traditional\math\compFP.asm
-               jShiftDone   0x001900    program     static C:\MCC18\src\traditional\math\addFP.asm
-               jShiftLoop   0x0018f2    program     static C:\MCC18\src\traditional\math\addFP.asm
-                jSignDone   0x001930    program     static C:\MCC18\src\traditional\math\addFP.asm
-              jSignedZero   0x001970    program     static C:\MCC18\src\traditional\math\divFP.asm
-                 jSignsEQ   0x001bba    program     static C:\MCC18\src\traditional\math\compFP.asm
-                  jUnpkA1   0x001cfc    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                  jUnpkA2   0x001d14    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                 jUnpkANZ   0x001d0a    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                  jUnpkB1   0x001d2c    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                  jUnpkB2   0x001d44    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                 jUnpkBNZ   0x001d3a    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                 jUnpkNaN   0x001d1e    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                 jWNotNeg   0x0018ec    program     static C:\MCC18\src\traditional\math\addFP.asm
-                    jZero   0x001b3c    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                    jZero   0x001ae8    program     static C:\MCC18\src\traditional\math\castFP08.asm
-               jZero1and2   0x001c62    program     static C:\MCC18\src\traditional\math\packFP.asm
-                     loop   0x001f32    program     static                          
-                   loop_h   0x001f10    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
-                   loop_l   0x001f1a    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
-                     main   0x0000b8    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                 mcu_init   0x000188    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                     test   0x001d68    program     static                          
-               timer_init   0x000192    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                   valueR   0x000202    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               zero_block   0x001f10    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
+                 _startup   0x002b42    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                 adc_init   0x000114    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                  canInit   0x001848    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                  canMode   0x001884    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                compare_l   0x002b38    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
+                copy_loop   0x0029e0    program     static                          
+            copy_one_byte   0x0029e6    program     static                          
+                     done   0x002a0a    program     static                          
+             done_copying   0x0029f4    program     static                          
+                 jANotInf   0x002586    program     static C:\MCC18\src\traditional\math\divFP.asm
+                 jANotInf   0x002464    program     static C:\MCC18\src\traditional\math\addFP.asm
+                 jANotInf   0x00262c    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                 jANotNeg   0x0024f8    program     static C:\MCC18\src\traditional\math\addFP.asm
+                jANotZero   0x00259a    program     static C:\MCC18\src\traditional\math\divFP.asm
+              jAandWsetup   0x0024c8    program     static C:\MCC18\src\traditional\math\addFP.asm
+                  jAisNeg   0x002834    program     static C:\MCC18\src\traditional\math\compFP.asm
+                 jAltBexp   0x0024b6    program     static C:\MCC18\src\traditional\math\addFP.asm
+                jBANotInf   0x00245a    program     static C:\MCC18\src\traditional\math\addFP.asm
+                 jBNotInf   0x002472    program     static C:\MCC18\src\traditional\math\addFP.asm
+              jBothFinite   0x00263a    program     static C:\MCC18\src\traditional\math\mulFP.asm
+             jBothNotZero   0x0027d6    program     static C:\MCC18\src\traditional\math\compFP.asm
+             jBothNotZero   0x002646    program     static C:\MCC18\src\traditional\math\mulFP.asm
+            jDifOrPosSign   0x002486    program     static C:\MCC18\src\traditional\math\addFP.asm
+                      jEQ   0x0027f2    program     static C:\MCC18\src\traditional\math\compFP.asm
+                    jExch   0x0027fe    program     static C:\MCC18\src\traditional\math\compFP.asm
+                    jExit   0x002734    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                    jExit   0x002792    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                   jExpEQ   0x002844    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jFinal   0x002828    program     static C:\MCC18\src\traditional\math\compFP.asm
+               jFinalSign   0x002560    program     static C:\MCC18\src\traditional\math\addFP.asm
+                jHaveZero   0x002642    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                jI2F16Beg   0x002424    program     static C:\MCC18\src\traditional\math\cast16FP.asm
+                    jLoop   0x0025c2    program     static C:\MCC18\src\traditional\math\divFP.asm
+                    jLoop   0x002772    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jLoop   0x00271c    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                jLoopExit   0x002782    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                jLoopExit   0x00272a    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                     jMax   0x002746    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                     jMax   0x0026f8    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                  jMaxNeg   0x002754    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x002702    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                  jMaxPos   0x0026fc    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                  jMaxPos   0x00274a    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                      jNE   0x0027f6    program     static C:\MCC18\src\traditional\math\compFP.asm
+                    jNext   0x0025e8    program     static C:\MCC18\src\traditional\math\divFP.asm
+                jNoAdjust   0x0025e6    program     static C:\MCC18\src\traditional\math\divFP.asm
+                  jNoExch   0x00281e    program     static C:\MCC18\src\traditional\math\compFP.asm
+             jNotBothZero   0x00248a    program     static C:\MCC18\src\traditional\math\addFP.asm
+                  jNotInf   0x002762    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jNotInf   0x00270c    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                  jPkLoop   0x0028a8    program     static C:\MCC18\src\traditional\math\packFP.asm
+             jPkRoundDone   0x0028f2    program     static C:\MCC18\src\traditional\math\packFP.asm
+               jPkRoundIt   0x0028da    program     static C:\MCC18\src\traditional\math\packFP.asm
+             jPkShiftDone   0x0028c4    program     static C:\MCC18\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x00287e    program     static C:\MCC18\src\traditional\math\packFP.asm
+                  jRotate   0x002850    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jShift   0x00283a    program     static C:\MCC18\src\traditional\math\compFP.asm
+               jShiftDone   0x002520    program     static C:\MCC18\src\traditional\math\addFP.asm
+               jShiftLoop   0x002512    program     static C:\MCC18\src\traditional\math\addFP.asm
+                jSignDone   0x002550    program     static C:\MCC18\src\traditional\math\addFP.asm
+              jSignedZero   0x002590    program     static C:\MCC18\src\traditional\math\divFP.asm
+                 jSignsEQ   0x0027da    program     static C:\MCC18\src\traditional\math\compFP.asm
+                  jUnpkA1   0x00291c    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x002934    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x00292a    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x00294c    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x002964    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x00295a    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x00293e    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jWNotNeg   0x00250c    program     static C:\MCC18\src\traditional\math\addFP.asm
+                    jZero   0x00275c    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jZero   0x002708    program     static C:\MCC18\src\traditional\math\castFP08.asm
+               jZero1and2   0x002882    program     static C:\MCC18\src\traditional\math\packFP.asm
+                     loop   0x002b52    program     static                          
+                   loop_h   0x002b30    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
+                   loop_l   0x002b3a    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
+                     main   0x0000b8    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                 mcu_init   0x000188    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                     test   0x002988    program     static                          
+               timer_init   0x000192    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                   valueR   0x000204    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               zero_block   0x002b30    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
                    ADCON0   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                ADCON0bits   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                    ADCON1   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                ADCON1bits   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                    ADCON2   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                ADCON2bits   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-                ADCResult   0x00006a       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
+                ADCResult   0x00006a       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
                     ADRES   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                    ADRESH   0x000fc4       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                    ADRESL   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
@@ -506,8 +513,8 @@ J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\
                CIOCONbits   0x000f73       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                   COMSTAT   0x000f74       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
               COMSTATbits   0x000f74       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-          ComandedAddress   0x000116       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-       ContentionWaitTime   0x00007a       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
+          ComandedAddress   0x000116       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+       ContentionWaitTime   0x00007a       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
                      DDRA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                  DDRAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                      DDRB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
@@ -549,8 +556,8 @@ J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\
                  IPR2bits   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                      IPR3   0x000fa5       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                  IPR3bits   0x000fa5       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-            J1939_Address   0x000115       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-              J1939_Flags   0x000117       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
+            J1939_Address   0x000115       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+              J1939_Flags   0x000117       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
                      LATA   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                  LATAbits   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                      LATB   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
@@ -567,12 +574,12 @@ J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\
                 MSEL2bits   0x000df2       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                     MSEL3   0x000df3       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                 MSEL3bits   0x000df3       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-                     Name   0x00010d       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
+                     Name   0x00010d       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
                    OSCCON   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                OSCCONbits   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                   OSCTUNE   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
               OSCTUNEbits   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-               OneMessage   0x000100       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
+               OneMessage   0x000100       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
                        PC   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                       PCL   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                    PCLATH   0x000ffa       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
@@ -840,10 +847,10 @@ J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\
              RXM1SIDHbits   0x000f1c       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                  RXM1SIDL   0x000f1d       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
              RXM1SIDLbits   0x000f1d       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-                 RXbuffer   0x000180       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                    RXend   0x0001eb       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                   RXsize   0x0001ed       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                  RXstart   0x0001ea       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
+                 RXbuffer   0x000180       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                    RXend   0x0001eb       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                   RXsize   0x0001ed       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                  RXstart   0x0001ea       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
                     SDFLC   0x000dd8       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                 SDFLCbits   0x000dd8       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                      SIGN   0x00000e       data     extern C:\MCC18\src\traditional\math\cmath18.asm
@@ -982,11 +989,11 @@ J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\
                     TXREG   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                     TXSTA   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                 TXSTAbits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-                 TXbuffer   0x000118       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                    TXend   0x0001e9       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                   TXsize   0x0001ec       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                  TXstart   0x0001e8       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-               TimerValue   0x000068       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
+                 TXbuffer   0x000118       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                    TXend   0x0001e9       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                   TXsize   0x0001ec       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                  TXstart   0x0001e8       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+               TimerValue   0x000068       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
                    WDTCON   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                WDTCONbits   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                      WREG   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
@@ -1018,14 +1025,14 @@ J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\
                   __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcsetch.c
                   __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcread.c
                   __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcopen.c
-                  __tmp_0   0x000014       data     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                  __tmp_0   0x000014       data     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
+                  __tmp_0   0x000014       data     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                  __tmp_0   0x000014       data     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
                 curr_byte   0x000073       data     static C:\MCC18\src\traditional\startup\c018i.c
                curr_entry   0x000075       data     static C:\MCC18\src\traditional\startup\c018i.c
                  data_ptr   0x000077       data     static C:\MCC18\src\traditional\startup\c018i.c
-                     name   0x000060       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
+                     name   0x000060       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
                      prom   0x000070       data     static C:\MCC18\src\traditional\startup\c018i.c
-                  voltage   0x00006c       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
+                  voltage   0x00006c       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
 
 
 
@@ -1035,155 +1042,162 @@ J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\
                    _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
                    __init   0x000006    program     extern C:\MCC18\src\traditional\stdclib\__init.c
-      InterruptVectorHigh   0x000008    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
+      InterruptVectorHigh   0x000008    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
        ___return_lbl00000   0x00000c    program     static                          
-     InterruptHandlerHigh   0x00000e    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                     main   0x0000b8    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                 adc_init   0x000114    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                 mcu_init   0x000188    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               timer_init   0x000192    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               User_Timer   0x0001bc    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                   valueR   0x000202    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-        SendAirTemperatur   0x0005f8    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-            SendFuelLevel   0x0006b8    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-CalcAirTemperatur_For_J1939   0x00074c    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-  CalcFuelLevel_For_J1939   0x0008c6    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               J1939_init   0x000b38    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                  canInit   0x000c28    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                  canMode   0x000c64    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-          J1939_MesToRegs   0x000cbc    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-          J1939_RegsToMes   0x000ece    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-           J1939_CopyName   0x001122    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-       J1939_ClaimAddress   0x001166    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-   J1939_SetAddressFilter   0x00122a    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
- J1939_RecalculateAddress   0x001250    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-        J1939_CompareName   0x0012ac    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-     J1939_SendOneMessage   0x001342    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-               J1939_poll   0x00142a    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-    J1939_ReceiveMessages   0x001482    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-  J1939_PutInReceiveQueue   0x0015ac    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-   J1939_TransmitMessages   0x0015fc    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-               J1939_Send   0x001656    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-            J1939_Receive   0x0016da    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-             J1939_RXsize   0x00173c    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-             J1939_TXsize   0x001744    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-             J1939_memcpy   0x00174c    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-            ECAN_Transmit   0x0017aa    program     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                 FLO1632U   0x0017f0    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
-                 FLO1632S   0x0017f4    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
-                jI2F16Beg   0x001804    program     static C:\MCC18\src\traditional\math\cast16FP.asm
-                    FPS32   0x00181a    program     extern C:\MCC18\src\traditional\math\addFP.asm
-                    FPA32   0x00181c    program     extern C:\MCC18\src\traditional\math\addFP.asm
-                jBANotInf   0x00183a    program     static C:\MCC18\src\traditional\math\addFP.asm
-                 jANotInf   0x001844    program     static C:\MCC18\src\traditional\math\addFP.asm
-                 jBNotInf   0x001852    program     static C:\MCC18\src\traditional\math\addFP.asm
-            jDifOrPosSign   0x001866    program     static C:\MCC18\src\traditional\math\addFP.asm
-             jNotBothZero   0x00186a    program     static C:\MCC18\src\traditional\math\addFP.asm
-                 jAltBexp   0x001896    program     static C:\MCC18\src\traditional\math\addFP.asm
-              jAandWsetup   0x0018a8    program     static C:\MCC18\src\traditional\math\addFP.asm
-                 jANotNeg   0x0018d8    program     static C:\MCC18\src\traditional\math\addFP.asm
-                 jWNotNeg   0x0018ec    program     static C:\MCC18\src\traditional\math\addFP.asm
-               jShiftLoop   0x0018f2    program     static C:\MCC18\src\traditional\math\addFP.asm
-               jShiftDone   0x001900    program     static C:\MCC18\src\traditional\math\addFP.asm
-                jSignDone   0x001930    program     static C:\MCC18\src\traditional\math\addFP.asm
-               jFinalSign   0x001940    program     static C:\MCC18\src\traditional\math\addFP.asm
-                    FPD32   0x001948    program     extern C:\MCC18\src\traditional\math\divFP.asm
-                 jANotInf   0x001966    program     static C:\MCC18\src\traditional\math\divFP.asm
-              jSignedZero   0x001970    program     static C:\MCC18\src\traditional\math\divFP.asm
-                jANotZero   0x00197a    program     static C:\MCC18\src\traditional\math\divFP.asm
-                    jLoop   0x0019a2    program     static C:\MCC18\src\traditional\math\divFP.asm
-                jNoAdjust   0x0019c6    program     static C:\MCC18\src\traditional\math\divFP.asm
-                    jNext   0x0019c8    program     static C:\MCC18\src\traditional\math\divFP.asm
-                    FPM32   0x0019ee    program     extern C:\MCC18\src\traditional\math\mulFP.asm
-                 jANotInf   0x001a0c    program     static C:\MCC18\src\traditional\math\mulFP.asm
-              jBothFinite   0x001a1a    program     static C:\MCC18\src\traditional\math\mulFP.asm
-                jHaveZero   0x001a22    program     static C:\MCC18\src\traditional\math\mulFP.asm
-             jBothNotZero   0x001a26    program     static C:\MCC18\src\traditional\math\mulFP.asm
-                  INT3208   0x001ac8    program     extern C:\MCC18\src\traditional\math\castFP08.asm
-                     jMax   0x001ad8    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                  jMaxPos   0x001adc    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                  jMaxNeg   0x001ae2    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                    jZero   0x001ae8    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                  jNotInf   0x001aec    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                    jLoop   0x001afc    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                jLoopExit   0x001b0a    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                    jExit   0x001b14    program     static C:\MCC18\src\traditional\math\castFP08.asm
-                  INT3216   0x001b16    program     extern C:\MCC18\src\traditional\math\castFP16.asm
-                     jMax   0x001b26    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                  jMaxPos   0x001b2a    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                  jMaxNeg   0x001b34    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                    jZero   0x001b3c    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                  jNotInf   0x001b42    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                    jLoop   0x001b52    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                jLoopExit   0x001b62    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                    jExit   0x001b72    program     static C:\MCC18\src\traditional\math\castFP16.asm
-                  TAGTB32   0x001b74    program     extern C:\MCC18\src\traditional\math\gtFP.asm
-                  TALTB32   0x001b86    program     extern C:\MCC18\src\traditional\math\ltFP.asm
-              __FpCompare   0x001b98    program     extern C:\MCC18\src\traditional\math\compFP.asm
-             jBothNotZero   0x001bb6    program     static C:\MCC18\src\traditional\math\compFP.asm
-                 jSignsEQ   0x001bba    program     static C:\MCC18\src\traditional\math\compFP.asm
-                      jEQ   0x001bd2    program     static C:\MCC18\src\traditional\math\compFP.asm
-                      jNE   0x001bd6    program     static C:\MCC18\src\traditional\math\compFP.asm
-                    jExch   0x001bde    program     static C:\MCC18\src\traditional\math\compFP.asm
-                  jNoExch   0x001bfe    program     static C:\MCC18\src\traditional\math\compFP.asm
-                   jFinal   0x001c08    program     static C:\MCC18\src\traditional\math\compFP.asm
-                  jAisNeg   0x001c14    program     static C:\MCC18\src\traditional\math\compFP.asm
-                   jShift   0x001c1a    program     static C:\MCC18\src\traditional\math\compFP.asm
-                   jExpEQ   0x001c24    program     static C:\MCC18\src\traditional\math\compFP.asm
-                  jRotate   0x001c30    program     static C:\MCC18\src\traditional\math\compFP.asm
-            __FpReturnNaN   0x001c42    program     extern C:\MCC18\src\traditional\math\packFP.asm
-                 __FpExit   0x001c4e    program     extern C:\MCC18\src\traditional\math\packFP.asm
-        __FpReturnSignInf   0x001c50    program     extern C:\MCC18\src\traditional\math\packFP.asm
-         __FpReturnNegInf   0x001c54    program     extern C:\MCC18\src\traditional\math\packFP.asm
-         __FpReturnPosInf   0x001c5a    program     extern C:\MCC18\src\traditional\math\packFP.asm
-           jReturnPosInf0   0x001c5e    program     static C:\MCC18\src\traditional\math\packFP.asm
-               jZero1and2   0x001c62    program     static C:\MCC18\src\traditional\math\packFP.asm
-       __FpReturnSignZero   0x001c68    program     extern C:\MCC18\src\traditional\math\packFP.asm
-        __FpReturnNegZero   0x001c6c    program     extern C:\MCC18\src\traditional\math\packFP.asm
-        __FpReturnPosZero   0x001c74    program     extern C:\MCC18\src\traditional\math\packFP.asm
-                 __FpPack   0x001c7a    program     extern C:\MCC18\src\traditional\math\packFP.asm
-                  jPkLoop   0x001c88    program     static C:\MCC18\src\traditional\math\packFP.asm
-             jPkShiftDone   0x001ca4    program     static C:\MCC18\src\traditional\math\packFP.asm
-               jPkRoundIt   0x001cba    program     static C:\MCC18\src\traditional\math\packFP.asm
-             jPkRoundDone   0x001cd2    program     static C:\MCC18\src\traditional\math\packFP.asm
-              __FpReturnW   0x001cd2    program     extern C:\MCC18\src\traditional\math\packFP.asm
-              __FpUnPackA   0x001cf2    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
-                  jUnpkA1   0x001cfc    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                 jUnpkANZ   0x001d0a    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                  jUnpkA2   0x001d14    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                 jUnpkNaN   0x001d1e    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-              __FpUnPackB   0x001d22    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
-                  jUnpkB1   0x001d2c    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                 jUnpkBNZ   0x001d3a    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                  jUnpkB2   0x001d44    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
-                _do_cinit   0x001d4e    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                     test   0x001d68    program     static                          
-                copy_loop   0x001dc0    program     static                          
-            copy_one_byte   0x001dc6    program     static                          
-             done_copying   0x001dd4    program     static                          
-                     done   0x001dea    program     static                          
-       ___return_lbl00002   0x001dea    program     static                          
-                  OpenADC   0x001dec    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
-               OpenTimer1   0x001e5a    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
-              WriteTimer1   0x001e9c    program     extern C:\MCC18\src\pmc_common\Timers\t1write.c
-               SetChanADC   0x001ed4    program     extern C:\MCC18\src\pmc_common\ADC\adcsetch.c
-            __zero_memory   0x001f02    program     extern C:\MCC18\src\traditional\proc\p18F2580.asm
-                   loop_h   0x001f10    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
-               zero_block   0x001f10    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
-                compare_l   0x001f18    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
-                   loop_l   0x001f1a    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
-                 _startup   0x001f22    program     extern C:\MCC18\src\traditional\startup\c018i.c
-                     loop   0x001f32    program     static                          
-       ___return_lbl00001   0x001f3c    program     static                          
-                  ReadADC   0x001f3e    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
-                  BusyADC   0x001f50    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
-                 CloseADC   0x001f5a    program     extern C:\MCC18\src\pmc_common\ADC\adcclose.c
-               ConvertADC   0x001f60    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
-               __config_0   0x300001    program     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               __config_1   0x300003    program     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               __config_2   0x300005    program     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               __config_3   0x300006    program     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
+     InterruptHandlerHigh   0x00000e    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                     main   0x0000b8    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                 adc_init   0x000114    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                 mcu_init   0x000188    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               timer_init   0x000192    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               User_Timer   0x0001bc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                   valueR   0x000204    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+        SendAirTemperatur   0x0005fc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+            SendFuelLevel   0x0006bc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+CalcAirTemperatur_For_J1939   0x000750    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               __tmplbl_7   0x00144a    program     static                          
+               __tmplbl_6   0x00144a    program     static                          
+               __tmplbl_5   0x00144a    program     static                          
+               __tmplbl_4   0x00144a    program     static                          
+               __tmplbl_3   0x00144a    program     static                          
+               __tmplbl_2   0x00144a    program     static                          
+               __tmplbl_1   0x00144a    program     static                          
+  CalcFuelLevel_For_J1939   0x0014e4    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               J1939_init   0x001758    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                  canInit   0x001848    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                  canMode   0x001884    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+          J1939_MesToRegs   0x0018dc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+          J1939_RegsToMes   0x001aee    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+           J1939_CopyName   0x001d42    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+       J1939_ClaimAddress   0x001d86    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+   J1939_SetAddressFilter   0x001e4a    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+ J1939_RecalculateAddress   0x001e70    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+        J1939_CompareName   0x001ecc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+     J1939_SendOneMessage   0x001f62    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+               J1939_poll   0x00204a    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+    J1939_ReceiveMessages   0x0020a2    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+J1939_RequestForAddressClaimHandling   0x002198    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+  J1939_PutInReceiveQueue   0x0021cc    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+   J1939_TransmitMessages   0x00221c    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+               J1939_Send   0x002276    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+            J1939_Receive   0x0022fa    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+             J1939_RXsize   0x00235c    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+             J1939_TXsize   0x002364    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+             J1939_memcpy   0x00236c    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+            ECAN_Transmit   0x0023ca    program     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                 FLO1632U   0x002410    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
+                 FLO1632S   0x002414    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
+                jI2F16Beg   0x002424    program     static C:\MCC18\src\traditional\math\cast16FP.asm
+                    FPS32   0x00243a    program     extern C:\MCC18\src\traditional\math\addFP.asm
+                    FPA32   0x00243c    program     extern C:\MCC18\src\traditional\math\addFP.asm
+                jBANotInf   0x00245a    program     static C:\MCC18\src\traditional\math\addFP.asm
+                 jANotInf   0x002464    program     static C:\MCC18\src\traditional\math\addFP.asm
+                 jBNotInf   0x002472    program     static C:\MCC18\src\traditional\math\addFP.asm
+            jDifOrPosSign   0x002486    program     static C:\MCC18\src\traditional\math\addFP.asm
+             jNotBothZero   0x00248a    program     static C:\MCC18\src\traditional\math\addFP.asm
+                 jAltBexp   0x0024b6    program     static C:\MCC18\src\traditional\math\addFP.asm
+              jAandWsetup   0x0024c8    program     static C:\MCC18\src\traditional\math\addFP.asm
+                 jANotNeg   0x0024f8    program     static C:\MCC18\src\traditional\math\addFP.asm
+                 jWNotNeg   0x00250c    program     static C:\MCC18\src\traditional\math\addFP.asm
+               jShiftLoop   0x002512    program     static C:\MCC18\src\traditional\math\addFP.asm
+               jShiftDone   0x002520    program     static C:\MCC18\src\traditional\math\addFP.asm
+                jSignDone   0x002550    program     static C:\MCC18\src\traditional\math\addFP.asm
+               jFinalSign   0x002560    program     static C:\MCC18\src\traditional\math\addFP.asm
+                    FPD32   0x002568    program     extern C:\MCC18\src\traditional\math\divFP.asm
+                 jANotInf   0x002586    program     static C:\MCC18\src\traditional\math\divFP.asm
+              jSignedZero   0x002590    program     static C:\MCC18\src\traditional\math\divFP.asm
+                jANotZero   0x00259a    program     static C:\MCC18\src\traditional\math\divFP.asm
+                    jLoop   0x0025c2    program     static C:\MCC18\src\traditional\math\divFP.asm
+                jNoAdjust   0x0025e6    program     static C:\MCC18\src\traditional\math\divFP.asm
+                    jNext   0x0025e8    program     static C:\MCC18\src\traditional\math\divFP.asm
+                    FPM32   0x00260e    program     extern C:\MCC18\src\traditional\math\mulFP.asm
+                 jANotInf   0x00262c    program     static C:\MCC18\src\traditional\math\mulFP.asm
+              jBothFinite   0x00263a    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                jHaveZero   0x002642    program     static C:\MCC18\src\traditional\math\mulFP.asm
+             jBothNotZero   0x002646    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                  INT3208   0x0026e8    program     extern C:\MCC18\src\traditional\math\castFP08.asm
+                     jMax   0x0026f8    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                  jMaxPos   0x0026fc    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                  jMaxNeg   0x002702    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                    jZero   0x002708    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                  jNotInf   0x00270c    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                    jLoop   0x00271c    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                jLoopExit   0x00272a    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                    jExit   0x002734    program     static C:\MCC18\src\traditional\math\castFP08.asm
+                  INT3216   0x002736    program     extern C:\MCC18\src\traditional\math\castFP16.asm
+                     jMax   0x002746    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jMaxPos   0x00274a    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x002754    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jZero   0x00275c    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jNotInf   0x002762    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jLoop   0x002772    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                jLoopExit   0x002782    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jExit   0x002792    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  TAGTB32   0x002794    program     extern C:\MCC18\src\traditional\math\gtFP.asm
+                  TALTB32   0x0027a6    program     extern C:\MCC18\src\traditional\math\ltFP.asm
+              __FpCompare   0x0027b8    program     extern C:\MCC18\src\traditional\math\compFP.asm
+             jBothNotZero   0x0027d6    program     static C:\MCC18\src\traditional\math\compFP.asm
+                 jSignsEQ   0x0027da    program     static C:\MCC18\src\traditional\math\compFP.asm
+                      jEQ   0x0027f2    program     static C:\MCC18\src\traditional\math\compFP.asm
+                      jNE   0x0027f6    program     static C:\MCC18\src\traditional\math\compFP.asm
+                    jExch   0x0027fe    program     static C:\MCC18\src\traditional\math\compFP.asm
+                  jNoExch   0x00281e    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jFinal   0x002828    program     static C:\MCC18\src\traditional\math\compFP.asm
+                  jAisNeg   0x002834    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jShift   0x00283a    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jExpEQ   0x002844    program     static C:\MCC18\src\traditional\math\compFP.asm
+                  jRotate   0x002850    program     static C:\MCC18\src\traditional\math\compFP.asm
+            __FpReturnNaN   0x002862    program     extern C:\MCC18\src\traditional\math\packFP.asm
+                 __FpExit   0x00286e    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x002870    program     extern C:\MCC18\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x002874    program     extern C:\MCC18\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x00287a    program     extern C:\MCC18\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x00287e    program     static C:\MCC18\src\traditional\math\packFP.asm
+               jZero1and2   0x002882    program     static C:\MCC18\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x002888    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x00288c    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x002894    program     extern C:\MCC18\src\traditional\math\packFP.asm
+                 __FpPack   0x00289a    program     extern C:\MCC18\src\traditional\math\packFP.asm
+                  jPkLoop   0x0028a8    program     static C:\MCC18\src\traditional\math\packFP.asm
+             jPkShiftDone   0x0028c4    program     static C:\MCC18\src\traditional\math\packFP.asm
+               jPkRoundIt   0x0028da    program     static C:\MCC18\src\traditional\math\packFP.asm
+             jPkRoundDone   0x0028f2    program     static C:\MCC18\src\traditional\math\packFP.asm
+              __FpReturnW   0x0028f2    program     extern C:\MCC18\src\traditional\math\packFP.asm
+              __FpUnPackA   0x002912    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkA1   0x00291c    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x00292a    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x002934    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x00293e    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x002942    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x00294c    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x00295a    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x002964    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                _do_cinit   0x00296e    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     test   0x002988    program     static                          
+                copy_loop   0x0029e0    program     static                          
+            copy_one_byte   0x0029e6    program     static                          
+             done_copying   0x0029f4    program     static                          
+                     done   0x002a0a    program     static                          
+       ___return_lbl00002   0x002a0a    program     static                          
+                  OpenADC   0x002a0c    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
+               OpenTimer1   0x002a7a    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
+              WriteTimer1   0x002abc    program     extern C:\MCC18\src\pmc_common\Timers\t1write.c
+               SetChanADC   0x002af4    program     extern C:\MCC18\src\pmc_common\ADC\adcsetch.c
+            __zero_memory   0x002b22    program     extern C:\MCC18\src\traditional\proc\p18F2580.asm
+                   loop_h   0x002b30    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
+               zero_block   0x002b30    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
+                compare_l   0x002b38    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
+                   loop_l   0x002b3a    program     static C:\MCC18\src\traditional\proc\p18F2580.asm
+                 _startup   0x002b42    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     loop   0x002b52    program     static                          
+       ___return_lbl00001   0x002b5c    program     static                          
+                  ReadADC   0x002b5e    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
+                  BusyADC   0x002b70    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
+                 CloseADC   0x002b7a    program     extern C:\MCC18\src\pmc_common\ADC\adcclose.c
+               ConvertADC   0x002b80    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
+               __config_0   0x300001    program     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               __config_1   0x300003    program     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               __config_2   0x300005    program     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               __config_3   0x300006    program     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
                  __AARGB7   0x000000       data     extern C:\MCC18\src\traditional\math\aarg.asm
                   __REMB3   0x000000       data     extern C:\MCC18\src\traditional\math\aarg.asm
                  __AARGB6   0x000001       data     extern C:\MCC18\src\traditional\math\aarg.asm
@@ -1211,32 +1225,32 @@ J1939_RequestForAddressClaimHandling   0x001578    program     extern E:\sektor\
                    __TEMP   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
                  __TEMPB0   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
                   __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcopen.c
-                  __tmp_0   0x000014       data     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                  __tmp_0   0x000014       data     static E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
+                  __tmp_0   0x000014       data     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                  __tmp_0   0x000014       data     static E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
                   __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcsetch.c
                   __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcread.c
-                     name   0x000060       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-               TimerValue   0x000068       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                ADCResult   0x00006a       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
-                  voltage   0x00006c       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\main.c
+                     name   0x000060       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+               TimerValue   0x000068       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                ADCResult   0x00006a       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
+                  voltage   0x00006c       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\main.c
                      prom   0x000070       data     static C:\MCC18\src\traditional\startup\c018i.c
                 curr_byte   0x000073       data     static C:\MCC18\src\traditional\startup\c018i.c
                curr_entry   0x000075       data     static C:\MCC18\src\traditional\startup\c018i.c
                  data_ptr   0x000077       data     static C:\MCC18\src\traditional\startup\c018i.c
-       ContentionWaitTime   0x00007a       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-               OneMessage   0x000100       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                     Name   0x00010d       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-            J1939_Address   0x000115       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-          ComandedAddress   0x000116       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-              J1939_Flags   0x000117       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                 TXbuffer   0x000118       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                 RXbuffer   0x000180       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                  TXstart   0x0001e8       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                    TXend   0x0001e9       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                  RXstart   0x0001ea       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                    RXend   0x0001eb       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                   TXsize   0x0001ec       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
-                   RXsize   0x0001ed       data     extern E:\sektor\Project\CANmodul ehb\CANModul_2580\src\j1939.c
+       ContentionWaitTime   0x00007a       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+               OneMessage   0x000100       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                     Name   0x00010d       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+            J1939_Address   0x000115       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+          ComandedAddress   0x000116       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+              J1939_Flags   0x000117       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                 TXbuffer   0x000118       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                 RXbuffer   0x000180       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                  TXstart   0x0001e8       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                    TXend   0x0001e9       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                  RXstart   0x0001ea       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                    RXend   0x0001eb       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                   TXsize   0x0001ec       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
+                   RXsize   0x0001ed       data     extern E:\sektor\GIT_project\Konverter\Source_PICF2580\src\j1939.c
              RXF6SIDHbits   0x000d60       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
                  RXF6SIDH   0x000d60       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
              RXF6SIDLbits   0x000d61       data     extern C:\MCC18\src\traditional\proc\p18F2580.asm
