@@ -1,0 +1,14 @@
+program Test_Converter;
+
+uses
+  Forms,
+  Unit_Glavn in 'Unit_Glavn.pas' {Form_Glavn};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm_Glavn, Form_Glavn);
+  Application.Run;
+end.

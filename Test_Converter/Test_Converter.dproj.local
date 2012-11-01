@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2011.06.14 12:53:50.812.pas,C:\Documents and Settings\Aleksandr\Мои документы\RAD Studio\Projects\Unit1.pas=E:\sektor\Project\CANmodul ehb\Test_Converter\Unit_Glavn.pas</Transaction>
+    <Transaction>2011.06.14 12:53:50.812.dfm,C:\Documents and Settings\Aleksandr\Мои документы\RAD Studio\Projects\Unit1.dfm=E:\sektor\Project\CANmodul ehb\Test_Converter\Unit_Glavn.dfm</Transaction>
+    <Transaction>2011.06.14 12:54:02.718.dproj,C:\Documents and Settings\Aleksandr\Мои документы\RAD Studio\Projects\Project1.dproj=E:\sektor\Project\CANmodul ehb\Test_Converter\Test_Converter.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
