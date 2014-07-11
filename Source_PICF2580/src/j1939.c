@@ -79,13 +79,13 @@ void J1939_init(unsigned char startAddress, unsigned char *name)
 
 	// Set up mask 0 to receive broadcast messages.  Set up mask 1 to 
 	// receive messages sent to the global address (or eventually us).
-	RXM0SIDH = 0x07;
-	RXM0SIDL = 0x88; //0x88;
+	RXM0SIDH = 0x00;
+	RXM0SIDL = 0x00;
 	RXM0EIDH = 0x00;
 	RXM0EIDL = 0x00;
 	RXM1SIDH = 0x00;
-	RXM1SIDL = 0x08;
-	RXM1EIDH = 0xFF;
+	RXM1SIDL = 0x00;
+	RXM1EIDH = 0x00;
 	RXM1EIDL = 0x00;
 
 	// Set up filter 0 to accept only broadcast messages (PF = 240-255).
@@ -449,7 +449,7 @@ unsigned char J1939_Send(struct J1939_message *msg)
 {
 	if (TXsize == BUFFER_SIZE) return BUFFER_FULL;
 	J1939_memcpy((unsigned char*)&TXbuffer[TXend],(const unsigned char*)msg,sizeof(struct J1939_message));
-	TXbuffer[TXend].sourceAddr = J1939_Address;
+	TXbuffer[TXend].sourceAddr = 0x00;//J1939_Address;
 	TXsize++;
 	TXend++;
 	if (TXend == BUFFER_SIZE) TXend=0;

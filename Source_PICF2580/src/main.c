@@ -9,7 +9,6 @@
 #define Rop              210.0
 
 unsigned char name[8] = {0};
-unsigned int TimerValue = 0;
 
 unsigned int ADCResult=0;
 float voltage=0;
@@ -21,9 +20,11 @@ void User_Timer(void);
 
 float valueR(unsigned char channel);
 void SendAirTemperatur(unsigned int value);
-void SendFuelLevel(unsigned char value);
+void SendAdaptiveCruise(unsigned char value);
+void SendAEBS(unsigned char value);
 unsigned int CalcAirTemperatur_For_J1939(void);
 unsigned char CalcFuelLevel_For_J1939(void);
+void ReceiveMessage(void);
 
 void InterruptHandlerHigh (void);
 
@@ -55,7 +56,7 @@ void main(void)
 	unsigned char status=0;
 	unsigned char count = 0,i;
 
-    LATC = 0xFF;
+    LATC = 0x3F;
 	TRISC = 0;		//порт C на выход RC0-RC7
 
 	mcu_init();
@@ -126,19 +127,83 @@ void timer_init(void)
 
 void User_Timer(void)
 {
+    static unsigned int TimerValue = 0;
+    static unsigned int TimerValue_2 = 0;
+    static unsigned int TimerValue_3 = 0;
+    static unsigned int valueAEBS = 1;
+    static unsigned int valueCruiseControl = 1;
+    static unsigned int TimerButtonUpdate = 0;
+    static unsigned int state_button_0 = 1;
+    static unsigned int state_button_1 = 1;
+    unsigned int ADC_value = 0;
+    
 	TimerValue++;
-	if (TimerValue == 120)
+	TimerValue_2++;
+	TimerValue_3++;
+	TimerButtonUpdate++;
+	
+	
+	if (TimerValue == 240) //Таймаут 1 с
 	{
 		SendAirTemperatur(CalcAirTemperatur_For_J1939());
-
+        TimerValue = 0;
 	}
-			
-	if (TimerValue == 240)
-	{			
-		SendFuelLevel(CalcFuelLevel_For_J1939());		
-		TimerValue = 0;
+	
+	
+	if (TimerButtonUpdate == 60) //Таймаут 250 мс
+	{
+    	SetChanADC(ADC_CH1);
+    	ConvertADC();
+    	while(BusyADC());
+    	ADC_value = (float) ReadADC();
+        if (ADC_value < 100)
+        {
+            if (state_button_0)
+            {
+                if (valueCruiseControl)
+                    valueCruiseControl = 0;
+                else
+                    valueCruiseControl = 1;
+                TimerButtonUpdate = 0;
+                state_button_0 = 0;
+            } 
+        }
+        else
+            state_button_0 = 1;
+        SetChanADC(ADC_CH0);
+    	ConvertADC();
+    	while(BusyADC());
+    	ADC_value = (float) ReadADC();
+        if (ADC_value < 100)
+        {
+            if (state_button_1)
+            {
+                if (valueAEBS)
+                    valueAEBS = 0;
+                else
+                    valueAEBS = 1;
+		        TimerButtonUpdate = 0; 
+		        state_button_1 = 0; 
+		    }
+		}
+	    else
+		       state_button_1 = 1; 
+	    TimerButtonUpdate = 0;   
 	}
-
+				
+	if (TimerValue_2 == 60) //Таймаут 250 мс
+	{
+		SendAdaptiveCruise(valueCruiseControl);		
+		TimerValue_2 = 0;
+	}
+	
+	if (TimerValue_3 == 12) //Таймаут 50 мс
+	{
+		SendAEBS(valueAEBS);	
+		TimerValue_3 = 0;	    
+	}
+	
+	ReceiveMessage();
 }
 
 float valueR(unsigned char channel)
@@ -217,19 +282,24 @@ void SendAirTemperatur(unsigned int value)  // PGN 65269 Ambient Conditions - AM
 	J1939_poll(5);
 }
 
-void SendFuelLevel(unsigned char value)  // PGN 65276 Dash Display - DD , SPN 96 Fuel Level (Byte 2)  
+void SendAdaptiveCruise(unsigned char value)  // PGN 65105 Adaptive Cruise Control ACC2, Operator Input - DD , SPN 5023 ACC usage demand 
 {
 	struct J1939_message msg;
 
 	msg.PDUformat = 0xFE;
-	msg.PDUspecific = 0xFC;
+	msg.PDUspecific = 0x51;
 	msg.priority = J1939_INFO_PRIORITY;
-	msg.sourceAddr = 0x21;
+	msg.sourceAddr = 0x00;
 	msg.dataLen = 8;
 	msg.r = 0;
 	msg.dp = 0;
-	msg.data[0] = 0xFF;
-	msg.data[1] = value;
+
+	if (value)
+	    msg.data[0] = 0xFD;
+	else
+	    msg.data[0] = 0xFC;
+
+	msg.data[1] = 0xFF;
 	msg.data[2] = 0xFF;
 	msg.data[3] = 0xFF;
 	msg.data[4] = 0xFF;
@@ -239,6 +309,36 @@ void SendFuelLevel(unsigned char value)  // PGN 65276 Dash Display - DD , SPN 96
 
 	J1939_Send(&msg);
 	J1939_poll(5);
+}
+
+//SPN 5681 PGN x0B00
+void SendAEBS(unsigned char value)
+{
+	struct J1939_message msg;
+
+	msg.PDUformat = 0x0B;
+	msg.PDUspecific = 0x00;
+	msg.priority = J1939_CONTROL_PRIORITY;
+	msg.sourceAddr = 0x00;
+	msg.dataLen = 8;
+	msg.r = 0;
+	msg.dp = 0;
+	
+	if (value)
+	    msg.data[0] = 0xFD;
+	else
+	    msg.data[0] = 0xFC;
+
+	msg.data[1] = 0xFF;
+	msg.data[2] = 0xFF;
+	msg.data[3] = 0xFF;
+	msg.data[4] = 0xFF;
+	msg.data[5] = 0xFF;
+	msg.data[6] = 0xFF;
+	msg.data[7] = 0xFF;
+
+	J1939_Send(&msg);
+	J1939_poll(5);    
 }
 
 unsigned int CalcAirTemperatur_For_J1939(void)
@@ -257,25 +357,29 @@ unsigned int CalcAirTemperatur_For_J1939(void)
 	return result;
 }
 
-unsigned char CalcFuelLevel_For_J1939(void)
+void ReceiveMessage(void)
 {
-	unsigned char result = 0;
-	float L = 0.0;  //Level %
-    float R = 0.0;
-
-	//% = 0,00020957*I31*I31-0,3759869*I31+164,76
-	//  Уровень %  	|  Сопротивление
-	//    	0		|	761.0
-	//		50		|	390.0
-	//		100		|	193.5
-  	R = valueR(0);
-	if (R > 761.0)
-		L = 0.0;
-	else if (R < 193.5)
-		L = 100.0;
-	else
-		L = 0.00020957*R*R - 0.3759869*R + 164.76;
-	result = (unsigned char)(L * 2.5);	
-	
-	return result;
+    struct J1939_message msg;
+    static time = 0;
+    
+    time++;
+    
+    while (J1939_RXsize())
+    {
+        J1939_Receive(&msg);
+        if ( (msg.PDUformat == 0xFD) && (msg.PDUspecific == 0xC4) ) 
+        {
+            if (((msg.data[3]>>2) & 0x03) == 0x01)
+                LATC |= 0xC0;
+            else
+                LATC &= ~0xC0;
+            time = 0; 
+        }
+    }
+    
+    if (time > 100)
+       LATC &= ~0xC0;    
+    else
+        time++;
+    
 }
