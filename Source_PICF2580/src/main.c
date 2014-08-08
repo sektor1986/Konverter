@@ -375,6 +375,14 @@ void ReceiveMessage(void)
                 LATC &= ~0xC0;
             time = 0; 
         }
+        else if ( (msg.PDUformat == 0xFE) && (msg.PDUspecific == 0x4F) )
+        {
+            if (((msg.data[0]>>4) & 0x03) == 0x01)
+                LATC |= 0xC0;
+            else
+                LATC &= ~0xC0;
+            time = 0;             
+        } 
     }
     
     if (time > 100)
