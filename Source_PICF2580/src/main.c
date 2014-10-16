@@ -24,6 +24,7 @@ void SendAirTemperatur(unsigned int value);
 void SendFuelLevel(unsigned char value);
 unsigned int CalcAirTemperatur_For_J1939(void);
 unsigned char CalcFuelLevel_For_J1939(void);
+void ReceiveMessage(void);
 
 void InterruptHandlerHigh (void);
 
@@ -69,9 +70,7 @@ void main(void)
 
 	while (1)
 	{
-/*		while(!PIR1bits.TMR1IF); 
-		User_Timer();
-        PIR1bits.TMR1IF = 0;*/
+
 	}
 
 	return;
@@ -127,18 +126,12 @@ void timer_init(void)
 void User_Timer(void)
 {
 	TimerValue++;
-	if (TimerValue == 120)
+	if (TimerValue == 240)  // 1c
 	{
 		SendAirTemperatur(CalcAirTemperatur_For_J1939());
-
 	}
-			
-	if (TimerValue == 240)
-	{			
-		SendFuelLevel(CalcFuelLevel_For_J1939());		
-		TimerValue = 0;
-	}
-
+	  
+    ReceiveMessage();
 }
 
 float valueR(unsigned char channel)
@@ -217,30 +210,6 @@ void SendAirTemperatur(unsigned int value)  // PGN 65269 Ambient Conditions - AM
 	J1939_poll(5);
 }
 
-void SendFuelLevel(unsigned char value)  // PGN 65276 Dash Display - DD , SPN 96 Fuel Level (Byte 2)  
-{
-	struct J1939_message msg;
-
-	msg.PDUformat = 0xFE;
-	msg.PDUspecific = 0xFC;
-	msg.priority = J1939_INFO_PRIORITY;
-	msg.sourceAddr = 0x21;
-	msg.dataLen = 8;
-	msg.r = 0;
-	msg.dp = 0;
-	msg.data[0] = 0xFF;
-	msg.data[1] = value;
-	msg.data[2] = 0xFF;
-	msg.data[3] = 0xFF;
-	msg.data[4] = 0xFF;
-	msg.data[5] = 0xFF;
-	msg.data[6] = 0xFF;
-	msg.data[7] = 0xFF;
-
-	J1939_Send(&msg);
-	J1939_poll(5);
-}
-
 unsigned int CalcAirTemperatur_For_J1939(void)
 {
 	unsigned int result = 0;
@@ -257,25 +226,35 @@ unsigned int CalcAirTemperatur_For_J1939(void)
 	return result;
 }
 
-unsigned char CalcFuelLevel_For_J1939(void)
+void ReceiveMessage(void)
 {
-	unsigned char result = 0;
-	float L = 0.0;  //Level %
-    float R = 0.0;
-
-	//% = 0,00020957*I31*I31-0,3759869*I31+164,76
-	//  Уровень %  	|  Сопротивление
-	//    	0		|	761.0
-	//		50		|	390.0
-	//		100		|	193.5
-  	R = valueR(0);
-	if (R > 761.0)
-		L = 0.0;
-	else if (R < 193.5)
-		L = 100.0;
-	else
-		L = 0.00020957*R*R - 0.3759869*R + 164.76;
-	result = (unsigned char)(L * 2.5);	
-	
-	return result;
+    struct J1939_message msg;
+    static time = 0;
+    
+    while (J1939_RXsize())
+    {
+        J1939_Receive(&msg);
+        if ( (msg.PDUformat == 0xFD) && (msg.PDUspecific == 0xC4) ) 
+        {
+            if (((msg.data[3]>>2) & 0x03) == 0x01)
+                LATC |= 0xC0;
+            else
+                LATC &= ~0xC0;
+            time = 0; 
+        }
+        else if ( (msg.PDUformat == 0xFE) && (msg.PDUspecific == 0x4F) )
+        {
+            if (((msg.data[0]>>4) & 0x03) == 0x01)
+                LATC |= 0xC0;
+            else
+                LATC &= ~0xC0;
+            time = 0;             
+        } 
+    }
+    
+    if (time > 100)
+       LATC &= ~0xC0;   
+    else
+        time++;
+    
 }
