@@ -449,7 +449,7 @@ unsigned char J1939_Send(struct J1939_message *msg)
 {
 	if (TXsize == BUFFER_SIZE) return BUFFER_FULL;
 	J1939_memcpy((unsigned char*)&TXbuffer[TXend],(const unsigned char*)msg,sizeof(struct J1939_message));
-	TXbuffer[TXend].sourceAddr = J1939_Address;//J1939_Address;
+	TXbuffer[TXend].sourceAddr = msg.sourceAddr;//J1939_Address;
 	TXsize++;
 	TXend++;
 	if (TXend == BUFFER_SIZE) TXend=0;

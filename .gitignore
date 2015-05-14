@@ -1,0 +1,11 @@
+*.obj
+*.lst
+*.exe
+*.~*
+*.abs
+*.mhx
+*.bak
+*.dcu
+*.identcache
+*.dsk
+*.lst

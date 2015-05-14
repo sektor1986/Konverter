@@ -2,9 +2,9 @@ object Form_Glavn: TForm_Glavn
   Left = 0
   Top = 0
   BorderStyle = bsSizeToolWin
-  Caption = 'Test_Converter V 1.0'
+  Caption = 'Test_Converter V 1.1'
   ClientHeight = 416
-  ClientWidth = 506
+  ClientWidth = 653
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,24 +14,27 @@ object Form_Glavn: TForm_Glavn
   Menu = MainMenu1
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  OnShow = FormShow
   DesignSize = (
-    506
+    653
     416)
   PixelsPerInch = 96
   TextHeight = 13
   object sBevel1: TsBevel
     Left = 8
     Top = 358
-    Width = 487
+    Width = 634
     Height = 16
     Anchors = [akLeft, akRight, akBottom]
     Shape = bsTopLine
     ExplicitTop = 354
+    ExplicitWidth = 487
   end
   object sLabel1: TsLabel
-    Left = 72
+    Left = 35
     Top = 8
     Width = 167
     Height = 32
@@ -46,8 +49,8 @@ object Form_Glavn: TForm_Glavn
     Font.Style = [fsBold]
   end
   object sLabel2: TsLabel
-    Left = 304
-    Top = 17
+    Left = 238
+    Top = 16
     Width = 137
     Height = 16
     Hint = 'SPN 96 Fuel Level 1 '
@@ -62,9 +65,9 @@ object Form_Glavn: TForm_Glavn
     Font.Style = [fsBold]
   end
   object sLabelFX1: TsLabelFX
-    Left = 88
+    Left = 51
     Top = 287
-    Width = 100
+    Width = 42
     Height = 27
     Alignment = taCenter
     Caption = '0 '#176#1057
@@ -76,9 +79,9 @@ object Form_Glavn: TForm_Glavn
     Font.Style = [fsBold]
   end
   object sLabelFX2: TsLabelFX
-    Left = 319
+    Left = 256
     Top = 287
-    Width = 100
+    Width = 42
     Height = 27
     Alignment = taCenter
     Caption = '0 %'
@@ -90,7 +93,7 @@ object Form_Glavn: TForm_Glavn
     Font.Style = [fsBold]
   end
   object sLabelFX3: TsLabelFX
-    Left = 88
+    Left = 51
     Top = 320
     Width = 55
     Height = 22
@@ -104,7 +107,7 @@ object Form_Glavn: TForm_Glavn
     Shadow.Color = clNavy
   end
   object sLabelFX4: TsLabelFX
-    Left = 319
+    Left = 256
     Top = 320
     Width = 55
     Height = 22
@@ -118,7 +121,7 @@ object Form_Glavn: TForm_Glavn
     Shadow.Color = clNavy
   end
   object sBitBtn1: TsBitBtn
-    Left = 423
+    Left = 570
     Top = 366
     Width = 75
     Height = 25
@@ -127,10 +130,10 @@ object Form_Glavn: TForm_Glavn
     TabOrder = 0
     OnClick = sBitBtn1Click
     SkinData.SkinSection = 'BUTTON'
-    ExplicitTop = 362
+    ExplicitLeft = 423
   end
   object iThermometer1: TiThermometer
-    Left = 88
+    Left = 51
     Top = 46
     Height = 235
     PositionMax = 50.000000000000000000
@@ -147,7 +150,7 @@ object Form_Glavn: TForm_Glavn
     PositionMax_2 = 50.000000000000000000
   end
   object iThermometer2: TiThermometer
-    Left = 319
+    Left = 256
     Top = 46
     Height = 235
     PositionMax = 100.000000000000000000
@@ -167,14 +170,15 @@ object Form_Glavn: TForm_Glavn
   object iThreadTimers1: TiThreadTimers
     Left = 16
     Top = 32
-    Enabled1 = True
     Interval1 = 2000
+    Interval2 = 100
     OnTimer1 = iThreadTimers1Timer1
+    OnTimer2 = iThreadTimers1Timer2
   end
   object stbBottom: TsStatusBar
     Left = 0
     Top = 397
-    Width = 506
+    Width = 653
     Height = 19
     Panels = <
       item
@@ -184,12 +188,27 @@ object Form_Glavn: TForm_Glavn
         Width = 50
       end>
     SkinData.SkinSection = 'STATUSBAR'
-    ExplicitLeft = 240
-    ExplicitTop = 352
-    ExplicitWidth = 0
+    ExplicitWidth = 506
+  end
+  object sCheckBox1: TsCheckBox
+    Left = 442
+    Top = 16
+    Width = 185
+    Height = 20
+    Caption = #1042#1082#1083#1102#1095#1080#1090#1100' '#13#10'"'#1057#1058#1054#1055'" '#1089#1080#1075#1085#1072#1083
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    SkinData.SkinSection = 'CHECKBOX'
+    ImgChecked = 0
+    ImgUnchecked = 0
   end
   object MainMenu1: TMainMenu
-    Left = 432
+    Left = 369
     Top = 16
     object N1: TMenuItem
       Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077

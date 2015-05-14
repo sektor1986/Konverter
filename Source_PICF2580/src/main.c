@@ -149,7 +149,7 @@ void User_Timer(void)
         TimerValue = 0;
 	}
 	
-	
+	/*
 	if (TimerButtonUpdate == 60) //Таймаут 250 мс
 	{
     	SetChanADC(ADC_CH1);
@@ -202,7 +202,7 @@ void User_Timer(void)
 		SendAEBS(valueAEBS);	
 		TimerValue_3 = 0;	    
 	}
-	
+	*/
 	ReceiveMessage();
 }
 
@@ -360,34 +360,68 @@ unsigned int CalcAirTemperatur_For_J1939(void)
 void ReceiveMessage(void)
 {
     struct J1939_message msg;
-    static time = 0;
+    static unsigned int time_msg1 = 0;
+    static unsigned int time_msg2 = 0;
+    unsigned char temp_light = 0;
     
-    time++;
+    time_msg1++;
+    time_msg2++;
     
+    J1939_poll(5);
     while (J1939_RXsize())
     {
         J1939_Receive(&msg);
         if ( (msg.PDUformat == 0xFD) && (msg.PDUspecific == 0xC4) ) 
         {
-            if (((msg.data[3]>>2) & 0x03) == 0x01)
-                LATC |= 0xC0;
-            else
-                LATC &= ~0xC0;
-            time = 0; 
+            if (((msg.data[3]>>2) & 0x03) != 0x03)
+            {
+                if (((msg.data[3]>>2) & 0x03) == 0x01)
+                {
+                    LATC |= 0xC0;
+                }
+                else
+                {
+                    if (time_msg2 > 200) 
+                        LATC &= ~0xC0;
+                }
+                time_msg1 = 0;
+            } 
         }
+        
         else if ( (msg.PDUformat == 0xFE) && (msg.PDUspecific == 0x4F) )
         {
-            if (((msg.data[0]>>4) & 0x03) == 0x01)
-                LATC |= 0xC0;
-            else
-                LATC &= ~0xC0;
-            time = 0;             
+            if (((msg.data[0]>>4) & 0x03) != 0x03)
+            {
+                if (((msg.data[0]>>4) & 0x03) == 0x01)
+                    LATC |= 0xC0;
+                else
+                {
+                    if (time_msg1 > 200) 
+                        LATC &= ~0xC0;
+                }
+                time_msg2 = 0;
+            }            
         } 
+        
     }
     
-    if (time > 100)
-       LATC &= ~0xC0;    
+    if ( (time_msg1 > 200) && (time_msg2 > 200) )
+    {
+       LATC &= ~0xC0; 
+       time_msg1 = 200;
+       time_msg2 = 200; 
+    }
     else
-        time++;
+    {
+        if (time_msg1 > 200)
+            time_msg1 = 200;
+        else
+            time_msg1++;
+            
+        if (time_msg2 > 200)
+            time_msg2 = 200;
+        else
+            time_msg2++;
+    }
     
 }
