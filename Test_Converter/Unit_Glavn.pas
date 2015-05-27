@@ -404,7 +404,7 @@ begin
   begin
     id.priority := 6;
     id.PDUformat := $FE;
-    id.PDUformat := $4F;
+    id.PDUspecific := $4F;
     id.sourceAddr := $00;
     SetLength(data, 8);
     data[0] := $DF;
@@ -454,7 +454,7 @@ begin
       (Integer(priority) shl 26)
   end;
   for i := 0 to 7 do
-    sMsgToSend.abData[i] := data[i];
+    sMsgToSend.abData[i] := data[i-1];
   sMsgToSend.dwTime := 0;
   sMsgToSend.uMsgInfo.bType := CAN_MSGTYPE_DATA;
   sMsgToSend.uMsgInfo.bRes := 0;

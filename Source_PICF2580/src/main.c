@@ -368,6 +368,9 @@ void ReceiveMessage(void)
     time_msg2++;
     
     J1939_poll(5);
+    
+    time_msg1++;
+    time_msg2++;
     while (J1939_RXsize())
     {
         J1939_Receive(&msg);
@@ -378,13 +381,16 @@ void ReceiveMessage(void)
                 if (((msg.data[3]>>2) & 0x03) == 0x01)
                 {
                     LATC |= 0xC0;
+                    time_msg1 = 0;
                 }
+                /*
                 else
                 {
                     if (time_msg2 > 200) 
                         LATC &= ~0xC0;
                 }
                 time_msg1 = 0;
+                */
             } 
         }
         
@@ -393,24 +399,30 @@ void ReceiveMessage(void)
             if (((msg.data[0]>>4) & 0x03) != 0x03)
             {
                 if (((msg.data[0]>>4) & 0x03) == 0x01)
+                {
                     LATC |= 0xC0;
+                    time_msg2 = 0;
+                }
+                /*
                 else
                 {
                     if (time_msg1 > 200) 
                         LATC &= ~0xC0;
                 }
                 time_msg2 = 0;
+                */
             }            
         } 
         
     }
     
-    if ( (time_msg1 > 200) && (time_msg2 > 200) )
+    if ( (time_msg1 > 1000) && (time_msg2 > 1000) )
     {
        LATC &= ~0xC0; 
-       time_msg1 = 200;
-       time_msg2 = 200; 
+       time_msg1 = 1000;
+       time_msg2 = 1000; 
     }
+    /*
     else
     {
         if (time_msg1 > 200)
@@ -423,5 +435,6 @@ void ReceiveMessage(void)
         else
             time_msg2++;
     }
+    */
     
 }
