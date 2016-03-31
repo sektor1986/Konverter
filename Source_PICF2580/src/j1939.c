@@ -9,13 +9,13 @@
 #define BUFFER_EMPTY 2
 
 //75%, 250Kbps @8MHz
-#define CAN_SPEED 		0x01, 0x90, 0x02
+//#define CAN_SPEED 		0x01, 0x90, 0x02
 //75%, 250Kbps @32MHz
 //#define CAN_SPEED 		0x07, 0x90, 0x02
 //75%, 250Kbps @40MHz
 //#define CAN_SPEED 		0x09, 0x90, 0x02
 //75%, 250Kbps @10MHz
-//#define CAN_SPEED 		0x01, 0xA0, 0x02
+#define CAN_SPEED 		0x01, 0xA0, 0x02
 
 #define J1939_CLAIM_ADDRESS_TX 0										// Отправка заявки на использование адреса
 #define J1939_CLAIM_ADDRESS_RX 1										// Получена заявка на адрес

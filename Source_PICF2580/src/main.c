@@ -5,7 +5,7 @@
 #include "timers.h"
 
 #pragma config XINST = OFF
-#pragma config OSC=IRCIO7, WDT=OFF, LVP=OFF, MCLRE = OFF, PBADEN = ON //, PWRT = ON //OSC=HS
+#pragma config OSC=HS, WDT=OFF, LVP=OFF, MCLRE = OFF, PBADEN = ON //, PWRT = ON //OSC=IRCIO7
 #define Rop              210.0
 
 unsigned char name[8] = {0};
@@ -43,8 +43,8 @@ void InterruptHandlerHigh ()
 	if (PIR1bits.TMR1IF)
 	{		
 		PIR1bits.TMR1IF = 0; 
-		WriteTimer1(0xE0C0);
-//		WriteTimer1(0xD8F0);  // Reload 1 ms 10MHz
+//		WriteTimer1(0xE0C0);
+		WriteTimer1(0xD8F0);  // Reload 1 ms 10MHz
 		User_Timer();
 	}	
 }
@@ -120,8 +120,8 @@ void timer_init(void)
 	WriteTimer1(0);
 	OpenTimer1(T1_16BIT_RW | T1_SOURCE_INT | T1_PS_1_1 | T1_OSC1EN_OFF | T1_SYNC_EXT_OFF | TIMER_INT_ON); 
 
-	WriteTimer1(0xE0C0);  // Reload 1 ms 8MHz
-//	WriteTimer1(0xD8F0);  // Reload 1 ms 10MHz
+//	WriteTimer1(0xE0C0);  // Reload 1 ms 8MHz
+	WriteTimer1(0xD8F0);  // Reload 1 ms 10MHz
 
 }
 
@@ -383,14 +383,6 @@ void ReceiveMessage(void)
                     LATC |= 0xC0;
                     time_msg1 = 0;
                 }
-                /*
-                else
-                {
-                    if (time_msg2 > 200) 
-                        LATC &= ~0xC0;
-                }
-                time_msg1 = 0;
-                */
             } 
         }
         
@@ -403,14 +395,6 @@ void ReceiveMessage(void)
                     LATC |= 0xC0;
                     time_msg2 = 0;
                 }
-                /*
-                else
-                {
-                    if (time_msg1 > 200) 
-                        LATC &= ~0xC0;
-                }
-                time_msg2 = 0;
-                */
             }            
         } 
         
