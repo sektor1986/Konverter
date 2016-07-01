@@ -46,7 +46,7 @@ file_000=src\j1939.c
 file_001=src\main.c
 file_002=src\canRegs.h
 file_003=src\j1939.h
-file_004=C:\MCC18\bin\LKR\18f2580_g.lkr
+file_004=C:\Program Files\Microchip\MPLABC18\v3.47\bin\LKR\18f2580_g.lkr
 [SUITE_INFO]
 suite_guid={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
 suite_state=

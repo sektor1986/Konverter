@@ -5,8 +5,9 @@
 #include "timers.h"
 
 #pragma config XINST = OFF
-#pragma config OSC=HS, WDT=OFF, LVP=OFF, MCLRE = OFF, PBADEN = ON //, PWRT = ON //OSC=IRCIO7
+#pragma config OSC=HS, WDT=ON, LVP=OFF, MCLRE = OFF, PBADEN = ON //, PWRT = ON //OSC=IRCIO7
 #define Rop              210.0
+#define Vop              5.11
 
 unsigned char name[8] = {0};
 
@@ -19,9 +20,11 @@ void timer_init(void);
 void User_Timer(void);
 
 float valueR(unsigned char channel);
+float valueV(unsigned char channel);
 void SendAirTemperatur(unsigned int value);
 void SendAdaptiveCruise(unsigned char value);
 void SendAEBS(unsigned char value);
+void SendFuelLevel(unsigned char value);
 unsigned int CalcAirTemperatur_For_J1939(void);
 unsigned char CalcFuelLevel_For_J1939(void);
 void ReceiveMessage(void);
@@ -42,6 +45,7 @@ void InterruptHandlerHigh ()
 {
 	if (PIR1bits.TMR1IF)
 	{		
+    	
 		PIR1bits.TMR1IF = 0; 
 //		WriteTimer1(0xE0C0);
 		WriteTimer1(0xD8F0);  // Reload 1 ms 10MHz
@@ -70,6 +74,7 @@ void main(void)
 
 	while (1)
 	{
+    	ClrWdt();
 /*		while(!PIR1bits.TMR1IF); 
 		User_Timer();
         PIR1bits.TMR1IF = 0;*/
@@ -106,13 +111,11 @@ void adc_init(void)
 void mcu_init(void) 
 { 
     // Set the internal clock to 16mHz 
-
 	OSCCONbits.IRCF0 = 1; 
 	OSCCONbits.IRCF1 = 1; 
 	OSCCONbits.IRCF2 = 1; 
 
 	OSCTUNEbits.PLLEN = 0; //Frequency Multiplier PLL for INTOSC Enable bit
-
 } 
 
 void timer_init(void)
@@ -128,7 +131,7 @@ void timer_init(void)
 void User_Timer(void)
 {
     static unsigned int TimerValue = 0;
-    static unsigned int TimerValue_2 = 0;
+    static unsigned int TimerValue_2 = 120;
     static unsigned int TimerValue_3 = 0;
     static unsigned int valueAEBS = 1;
     static unsigned int valueCruiseControl = 1;
@@ -143,10 +146,16 @@ void User_Timer(void)
 	TimerButtonUpdate++;
 	
 	
-	if (TimerValue == 240) //Таймаут 1 с
+	if (TimerValue == 235) //Таймаут 1 с
 	{
 		SendAirTemperatur(CalcAirTemperatur_For_J1939());
         TimerValue = 0;
+	}
+	
+    if (TimerValue_2 == 235) //Таймаут 1 с
+	{
+		SendFuelLevel(CalcFuelLevel_For_J1939());
+        TimerValue_2 = 0;
 	}
 	
 	/*
@@ -209,7 +218,7 @@ void User_Timer(void)
 float valueR(unsigned char channel)
 {              
 //               
-//             _____       _____
+//             _____       _____                        Uизм = (Rизм/(Rop+Rизм)) * Uref
 //     |------|_____|--*--|_____|------- + Uref         Rизм = (Rop * Uизм)/(Uref - Uизм)
 //              Rизм   |    Rop                         Rизм = (Rop * ADCизм)/(ADCref - ADCизм))
 //                     |
@@ -256,6 +265,32 @@ float valueR(unsigned char channel)
 	else
 		resist = 1000.0;
 	return resist;
+}
+
+float valueV(unsigned char channel)
+{
+    unsigned char i;
+	float ADCism = 0.0;
+	float ADCResult=0.0;
+	
+	switch (channel)
+	{
+		case 0: SetChanADC(ADC_CH3); break;
+		case 1: SetChanADC(ADC_CH2); break;
+		case 2: SetChanADC(ADC_CH1); break;
+		case 3:	SetChanADC(ADC_CH0); break;
+	}   
+	
+	for(i=0;i<50;i++)
+    {
+    	ConvertADC();
+    	while(BusyADC());
+    	ADCism += (float) ReadADC();
+    }
+    ADCism /= 50.0;  
+    ADCResult = ADCism * Vop / 1024; 
+    
+    return ADCResult;
 }
 
 void SendAirTemperatur(unsigned int value)  // PGN 65269 Ambient Conditions - AMB, SPN 171 Ambient Air Temperature (Byte 4-5) 
@@ -341,9 +376,34 @@ void SendAEBS(unsigned char value)
 	J1939_poll(5);    
 }
 
+//SPN 96 PGN 0xFEFC
+void SendFuelLevel(unsigned char value)
+{
+    struct J1939_message msg;
+
+	msg.PDUformat = 0xFE;
+	msg.PDUspecific = 0xFC;
+	msg.priority = J1939_INFO_PRIORITY;
+	msg.sourceAddr = 0x21;
+	msg.dataLen = 8;
+	msg.r = 0;
+	msg.dp = 0;
+	
+	msg.data[0] = 0xFF;
+	msg.data[1] = value;
+	msg.data[2] = 0xFF;
+	msg.data[3] = 0xFF;
+	msg.data[4] = 0xFF;
+	msg.data[5] = 0xFF;
+	msg.data[6] = 0xFF;
+	msg.data[7] = 0xFF;
+	
+	J1939_Send(&msg);
+	J1939_poll(5); 
+}
+
 unsigned int CalcAirTemperatur_For_J1939(void)
 {
-	unsigned int result = 0;
 	float C = 0.0;
 		
 	// C = 2,5641*R - 256,24
@@ -351,10 +411,33 @@ unsigned int CalcAirTemperatur_For_J1939(void)
 	// 		-40		|	84.3
 	//		0		|	100.0
 	//		40		|	115.5
-	C = 2.5641*valueR(1)-256.24;
-	result =( unsigned int)((C + 273.0)*32);
+	C = valueR(1);
+	if (C < 500)
+	{
+	    C = 2.5641*C - 256.24;
+	    return ( unsigned int)((C + 273.0)*32);
+	}
+	else
+	    return 0xFFFF;
 	
-	return result;
+}
+
+unsigned char CalcFuelLevel_For_J1939(void)
+{
+    unsigned char result = 0;
+    float V = 0.0;
+    
+    V = valueV(3);          // Получаем значение напряжения
+    if (V < 0.5)            
+        return 0xFF;        // Датчик не подключен
+    else if (V < 1)
+        return 0x00;        // Минимальный уровень
+    else if (V <= 3.7)
+    {
+        return (unsigned char)(92.593*V - 92.593);  // Рабочий диапазон
+    }
+    else
+        return 0xFA;        // Максимальный уровень
 }
 
 void ReceiveMessage(void)

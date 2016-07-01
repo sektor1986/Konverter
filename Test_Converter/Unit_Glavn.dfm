@@ -130,7 +130,6 @@ object Form_Glavn: TForm_Glavn
     TabOrder = 0
     OnClick = sBitBtn1Click
     SkinData.SkinSection = 'BUTTON'
-    ExplicitLeft = 423
   end
   object iThermometer1: TiThermometer
     Left = 51
@@ -188,7 +187,6 @@ object Form_Glavn: TForm_Glavn
         Width = 50
       end>
     SkinData.SkinSection = 'STATUSBAR'
-    ExplicitWidth = 506
   end
   object sCheckBox1: TsCheckBox
     Left = 442

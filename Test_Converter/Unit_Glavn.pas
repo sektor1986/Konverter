@@ -98,8 +98,16 @@ begin
       $F5:
         begin
           flagAirData := True;
-          iThermometer1.Position := (data[3] or (data[4] shl 8)) / 32 - 273;
-          sLabelFX1.Caption := FloatToStrF(iThermometer1.Position, ffFixed, 3, 1) + ' °C';
+          if (data[3] = $FF) and (data[4] = $FF) then
+          begin
+            iThermometer1.Position := 0;
+            sLabelFX1.Caption := 'Датчик отключен';
+          end
+          else
+          begin
+            iThermometer1.Position := (data[3] or (data[4] shl 8)) / 32 - 273;
+            sLabelFX1.Caption := FloatToStrF(iThermometer1.Position, ffFixed, 3, 1) + ' °C';
+          end;
           sLabelFX3.Caption := 'Период: ' + IntToStr(MilliSecondOfTheDay(Now) - intervalAirTemperature_old) + ' мс';
           intervalAirTemperature_old := MilliSecondOfTheDay(Now);
           Application.ProcessMessages;
@@ -107,8 +115,16 @@ begin
       $FC:
         begin
           flagFuelData := True;
-          iThermometer2.Position := data[1] / 2.5;
-          sLabelFX2.Caption := FloatToStrF(iThermometer2.Position, ffFixed, 3, 1) + ' %';
+          if data[1] = $FF then
+           begin
+            iThermometer2.Position := 0;
+            sLabelFX2.Caption := 'Датчик отключен';
+          end
+          else
+          begin
+            iThermometer2.Position := data[1] / 2.5;
+            sLabelFX2.Caption := FloatToStrF(iThermometer2.Position, ffFixed, 3, 1) + ' %';
+          end;
           sLabelFX4.Caption := 'Период: ' + IntToStr(MilliSecondOfTheDay(Now) - intervalFuel_old) + ' мс';
           intervalFuel_old := MilliSecondOfTheDay(Now);
           Application.ProcessMessages;
